@@ -182,7 +182,7 @@
 <center><img src="../assets/1-15.png" width = 650></center>
 <center>图1-15 选择GitHub仓库以创建Cloudflare Pages项目</center>
 
-&emsp;&emsp;然后，在“Project name”编辑框中输入Cloudflare Pages工程的名字。注意，**所生成的静态网页的默认网址是<project-name>.pages.dev**。<u>建议尽量起一个简洁好记的工程名</u>。
+&emsp;&emsp;然后，在“Project name”编辑框中输入Cloudflare Pages工程的名字。注意，**所生成的静态网页的默认网址是`<project-name>.pages.dev`**。<u>建议尽量起一个简洁好记的工程名</u>。
 
 &emsp;&emsp;如果对应的GitHub仓库有多个分支，可在“Production branch”中选择一个分支来构建Cloudflare Page，如图1-16所示。
 
@@ -197,7 +197,7 @@
 <center><img src="../assets/1-17.png" width = 100%></center>
 <center>图1-17 选择MkDocs预设并点击部署按钮</center>
 
-&emsp;&emsp;等待2~3分钟后，打开<project-name>.pages.dev，即可访问静态网页。
+&emsp;&emsp;等待2~3分钟后，打开`<project-name>.pages.dev`，即可访问静态网页。
 
 &emsp;&emsp;后续需要更新静态网页内容时，只需使用Git工具，将本地的更新内容同步到GitHub仓库即可。Cloudflare将自动检测GitHub仓库的更新动态并自动重新构建静态网页。
 

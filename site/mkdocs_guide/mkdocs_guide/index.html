@@ -1301,8 +1301,8 @@
 </div>
 <p><center><img src="../assets/1-17.png" width = 100%></center>
 <center>图1-17 选择MkDocs预设并点击部署按钮</center></p>
-<p>&emsp;&emsp;等待2~3分钟后，打开<code>&lt;project-name&gt;.pages.dev</code>，即可访问静态网页。</p>
-<p>&emsp;&emsp;后续需要更新静态网页内容时，只需使用Git工具，将本地的更新内容同步到GitHub仓库即可。Cloudflare将自动检测GitHub仓库的更新动态并自动重新构建静态网页。</p>
+<p>&emsp;&emsp;首次构建需等待1~3分钟。构建完毕后，打开<code>&lt;project-name&gt;.pages.dev</code>，即可访问静态网页。</p>
+<p>&emsp;&emsp;后续需要更新静态网页内容时，只需使用Git工具，将本地的更新内容同步到GitHub仓库即可。Cloudflare将自动检测GitHub仓库的更新动态并自动重新构建静态网页。Cloudflare基本可以实现在数秒内将静态网页的内容进行更新，如果等待片刻后，静态网页内容尚未更新，则可能是更新失败。</p>
 <div class="admonition warning">
 <p class="admonition-title">有时自动更新失败怎么办？</p>
 <p>&emsp;&emsp;有些时候，GitHub仓库被更新后，Cloudflare自动更新网页会出现失败的情况。此时，只需登录Cloudflare账户，在图1-11所示的界面找到所创建的Cloudflare Pages工程，并手动更新静态网页即可。</p>

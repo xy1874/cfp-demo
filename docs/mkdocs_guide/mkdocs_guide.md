@@ -82,6 +82,7 @@
 &emsp;&emsp;需要注意的是，预览时MkDocs工具生成的静态网页是临时的。因此，当文档撰写完毕，在正式部署前，必须在MkDocs工程的根目录上执行`mkdocs build`命令以生成HTML文本。此时，`docs文件夹`下的Markdown文件才与`site目录`下的HTML文件一一对应。
 
 
+
 ## 3. GiteePage部署
 
 ### 3.1 GitHub Desktop安装
@@ -133,6 +134,8 @@
 
 <center><img src="../assets/1-9.png" width = 600></center>
 <center>图1-9 访问GiteePage静态网页</center>
+
+
 
 ## 4. Cloudflare部署
 
@@ -199,7 +202,31 @@
 
 &emsp;&emsp;首次构建需等待1~3分钟。构建完毕后，打开`<project-name>.pages.dev`，即可访问静态网页。
 
-&emsp;&emsp;后续需要更新静态网页内容时，只需使用Git工具，将本地的更新内容同步到GitHub仓库即可。Cloudflare将自动检测GitHub仓库的更新动态并自动重新构建静态网页。Cloudflare基本可以实现在数秒内将静态网页的内容进行更新，如果等待片刻后，静态网页内容尚未更新，则可能是更新失败。
+&emsp;&emsp;后续需要更新静态网页内容时，只需使用Git工具，将本地的更新内容同步到GitHub仓库即可。Cloudflare将自动检测GitHub仓库的更新动态并自动更新静态网页。Cloudflare基本可以实现在数秒内将静态网页的内容进行更新，如果等待片刻后，静态网页内容尚未更新，则可能是更新失败。
 
-!!! warning "有时自动更新失败怎么办？"
-    &emsp;&emsp;有些时候，GitHub仓库被更新后，Cloudflare自动更新网页会出现失败的情况。此时，只需登录Cloudflare账户，在图1-11所示的界面找到所创建的Cloudflare Pages工程，并手动更新静态网页即可。
+!!! warning "自动更新失败怎么办？"
+    &emsp;&emsp;有些时候，GitHub仓库被更新后，Cloudflare自动更新网页会出现失败的情况。此时，只需登录Cloudflare账户，在图1-11所示的界面找到部署失败的Cloudflare Pages工程，如图1-18所示。
+
+    <center><img src="../assets/1-18.png" width = 100%></center>
+    <center>图1-18 登录Cloudflare，找到部署失败的工程</center>
+    
+    &emsp;&emsp;点击进入Cloudflare Pages工程页面，再点击“查看详细信息”，如图1-19所示。
+
+    <center><img src="../assets/1-19.png" width = 100%></center>
+    <center>图1-19 点击查看Cloudflare Page的部署详细信息</center>
+
+    &emsp;&emsp;最后，点击“构建日志”下方的“重试部署”按钮即可，如图1-20所示。
+
+    <center><img src="../assets/1-20.png" width = 100%></center>
+    <center>图1-20 重试部署</center>
+
+    &emsp;&emsp;一般重试部署后即可成功，若还是失败，则再次点击“重试部署”按钮。若多次重试仍然失败，则根据构建日志中的报错提示进行纠错，或尝试重新构建Cloudflare Pages工程。
+
+### 4.5 多个部署的回滚或删除
+
+&emsp;&emsp;每次更新GitHub仓库，或手动点击部署按钮，都会在Cloudflare Pages工程下生成一个对应的部署，如图1-21所示。
+
+<center><img src="../assets/1-21.png" width = 100%></center>
+<center>图1-21 Cloudflare Pages的多个部署</center>
+
+&emsp;&emsp;一般地，访问`<project-name>.pages.dev`时，默认选中图1-21所示的最新的部署。开发者还可以参考图1-21所示的操作对这些部署进行回滚、重试或删除。

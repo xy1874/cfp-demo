@@ -229,4 +229,4 @@
 <center><img src="../assets/1-21.png" width = 100%></center>
 <center>图1-21 Cloudflare Pages的多个部署</center>
 
-&emsp;&emsp;一般地，访问`<project-name>.pages.dev`时，默认选中图1-21所示的最新的部署。开发者还可以参考图1-21所示的操作对这些部署进行回滚、重试或删除。
+&emsp;&emsp;一般地，访问`<project-name>.pages.dev`时，默认访问的是图1-21中最新的部署。开发者还可以参考图1-21所示的操作对这些部署进行回滚、重试或删除。

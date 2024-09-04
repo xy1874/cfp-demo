@@ -210,17 +210,17 @@
     <center><img src="../assets/1-18.png" width = 100%></center>
     <center>图1-18 登录Cloudflare，找到部署失败的工程</center>
     
-    &emsp;&emsp;点击进入Cloudflare Pages工程页面，再点击“查看详细信息”，如图1-19所示。
+    &emsp;&emsp;点击进入Cloudflare Pages工程页面，再点击“View details”，如图1-19所示。
 
     <center><img src="../assets/1-19.png" width = 100%></center>
     <center>图1-19 点击查看Cloudflare Page的部署详细信息</center>
 
-    &emsp;&emsp;最后，点击“构建日志”下方的“重试部署”按钮即可，如图1-20所示。
+    &emsp;&emsp;最后，点击“Build log”下方的“Retry deployment”按钮即可，如图1-20所示。
 
     <center><img src="../assets/1-20.png" width = 100%></center>
     <center>图1-20 重试部署</center>
 
-    &emsp;&emsp;一般重试部署后即可成功，若还是失败，则再次点击“重试部署”按钮。若多次重试仍然失败，则根据构建日志中的报错提示进行纠错，或尝试重新构建Cloudflare Pages工程。
+    &emsp;&emsp;一般重试部署后即可成功，若还是失败，则再次点击重试部署按钮。若多次重试仍然失败，则根据日志中的报错提示进行纠错，或尝试重新构建Cloudflare Pages工程。
 
 ### 4.5 多个部署的回滚或删除
 

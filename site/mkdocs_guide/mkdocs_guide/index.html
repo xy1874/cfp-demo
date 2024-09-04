@@ -917,7 +917,7 @@
           <li class="md-nav__item">
   <a href="#42" class="md-nav__link">
     <span class="md-ellipsis">
-      4.2 创建仓库
+      4.2 构建静态网页
     </span>
   </a>
   
@@ -1137,7 +1137,7 @@
           <li class="md-nav__item">
   <a href="#42" class="md-nav__link">
     <span class="md-ellipsis">
-      4.2 创建仓库
+      4.2 构建静态网页
     </span>
   </a>
   
@@ -1287,8 +1287,12 @@
 <p>&emsp;&emsp;首先，向组织管理员提供用户名或注册邮箱以加入组织，如图1-10所示。</p>
 <p><center><img src="../assets/1-10.png" width = 500></center>
 <center>图1-10 加入GitHub组织</center></p>
-<h3 id="42">4.2 创建仓库</h3>
+<h3 id="42">4.2 构建静态网页</h3>
 <p>&emsp;&emsp;参考<a href="../mkdocs_guide/#2-mkdocs" target=_blank>第2节-MkDocs开发</a>在本地环境中构建好静态网页，在GitHub组织（或个人账户中）创建仓库，并参考<a href="../mkdocs_guide/#32-gitee" target=_blank>3.2节 创建并同步Gitee仓库</a>将本地仓库更新到对应的GitHub仓库。</p>
+<div class="admonition tip">
+<p class="admonition-title">小提示</p>
+<p>&emsp;&emsp;本地的MkDocs工程在更新到GitHub仓库之前，最好先执行一次<code>mkdocs build</code>命令，否则Cloudflare构建静态网页可能失败。</p>
+</div>
 <h3 id="43-cloudflaregithub">4.3 连接Cloudflare与GitHub</h3>
 <p>&emsp;&emsp;打开链接<a href="https://pages.dev" target=_blank>pages.dev</a>，登录或注册你的Cloudflare账户。</p>
 <p>&emsp;&emsp;点击左侧栏目中的“Workers &amp; Pages”，点击右侧页面的“Pages”，然后点击“Connect to Git”按钮，如图1-11所示。</p>
@@ -1313,11 +1317,7 @@
 <p><center><img src="../assets/1-16.png" width = 500></center>
 <center>图1-16 选择GitHub仓库的某个分支以构建静态网页</center></p>
 <p>&emsp;&emsp;随后在“Framework preset”中选择“MkDocs”，并点击“Save and Deploy”按钮即可，如图1-17所示。</p>
-<div class="admonition tip">
-<p class="admonition-title">小提示</p>
-<p>&emsp;&emsp;本地的MkDocs工程在更新到GitHub仓库之前，最好先执行一次<code>mkdocs build</code>命令，否则Cloudflare构建静态网页可能失败。</p>
-</div>
-<p><center><img src="../assets/1-17.png" width = 100%></center>
+<p><center><img src="../assets/1-17.png" width = 700></center>
 <center>图1-17 选择MkDocs预设并点击部署按钮</center></p>
 <p>&emsp;&emsp;首次构建需等待1~3分钟。构建完毕后，打开<code>&lt;project-name&gt;.pages.dev</code>，即可访问静态网页。</p>
 <p>&emsp;&emsp;后续需要更新静态网页内容时，只需使用Git工具，将本地的更新内容同步到GitHub仓库即可。Cloudflare将自动检测GitHub仓库的更新动态并自动更新静态网页。Cloudflare基本可以实现在数秒内将静态网页的内容进行更新，如果等待片刻后，静态网页内容尚未更新，则可能是更新失败。</p>

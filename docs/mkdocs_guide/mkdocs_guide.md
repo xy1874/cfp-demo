@@ -148,9 +148,12 @@
 <center><img src="../assets/1-10.png" width = 500></center>
 <center>图1-10 加入GitHub组织</center>
 
-### 4.2 创建仓库
+### 4.2 构建静态网页
 
 &emsp;&emsp;参考<a href="../mkdocs_guide/#2-mkdocs" target=_blank>第2节-MkDocs开发</a>在本地环境中构建好静态网页，在GitHub组织（或个人账户中）创建仓库，并参考<a href="../mkdocs_guide/#32-gitee" target=_blank>3.2节 创建并同步Gitee仓库</a>将本地仓库更新到对应的GitHub仓库。
+
+!!! tip "小提示"
+    &emsp;&emsp;本地的MkDocs工程在更新到GitHub仓库之前，最好先执行一次`mkdocs build`命令，否则Cloudflare构建静态网页可能失败。
 
 ### 4.3 连接Cloudflare与GitHub
 
@@ -194,10 +197,7 @@
 
 &emsp;&emsp;随后在“Framework preset”中选择“MkDocs”，并点击“Save and Deploy”按钮即可，如图1-17所示。
 
-!!! tip "小提示"
-    &emsp;&emsp;本地的MkDocs工程在更新到GitHub仓库之前，最好先执行一次`mkdocs build`命令，否则Cloudflare构建静态网页可能失败。
-
-<center><img src="../assets/1-17.png" width = 100%></center>
+<center><img src="../assets/1-17.png" width = 700></center>
 <center>图1-17 选择MkDocs预设并点击部署按钮</center>
 
 &emsp;&emsp;首次构建需等待1~3分钟。构建完毕后，打开`<project-name>.pages.dev`，即可访问静态网页。

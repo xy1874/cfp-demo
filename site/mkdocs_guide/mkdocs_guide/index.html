@@ -1341,7 +1341,7 @@
 <p><center><img src="../assets/1-22.png" width = 100%></center>
 <center>图1-22 因为<code>error code 127</code>而多次部署失败时，修改部署设置</center></p>
 <p>&emsp;&emsp;接着，按照如图1-21所示的操作重新部署即可。</p>
-<p>&emsp;&emsp;出现<code>error code 127</code>的原因是服务器未安装MkDocs环境。若采用第1种方法，服务器每次部署时，都需要将<code>requirements.txt</code>中的依赖包安装一次，因此部署时间较长，但优点是服务器真正具备了MkDocs环境，所以本地的MkDocs工程即使不执行<code>mkdocs build</code>命令最终也能在Cloudflare部署成功。第2种方法本质上是将MkDocs工程的<code>site</code>文件夹下的静态网页直接部署到Cloudflare，优点是部署速度较快，但本地的MkDocs工程在同步到GitHub仓库前必须先执行<code>mkdocs build</code>命令。</p>
+<p>&emsp;&emsp;出现<code>error code 127</code>的原因是服务器未安装MkDocs环境。若采用第1种方法，服务器每次部署时，都需要将<code>requirements.txt</code>中的依赖包安装一次，因此部署时间较长，但优点是服务器真正具备了MkDocs环境，所以本地的MkDocs工程即使不执行<code>mkdocs build</code>命令最终也能在Cloudflare部署成功。第2种方法本质上是将MkDocs工程下的<code>site</code>文件夹中的静态网页直接部署到Cloudflare，优点是部署速度较快，但本地的MkDocs工程在同步到GitHub仓库前必须先执行<code>mkdocs build</code>命令。</p>
 </div>
 <h3 id="45">4.5 多个部署的回滚或删除</h3>
 <p>&emsp;&emsp;每次更新GitHub仓库，或手动点击部署按钮，都会在Cloudflare Pages工程下生成一个对应的部署，如图1-23所示。</p>

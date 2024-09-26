@@ -236,7 +236,7 @@
 
     &emsp;&emsp;接着，按照如图1-21所示的操作重新部署即可。
 
-    &emsp;&emsp;出现`error code 127`的原因是服务器未安装MkDocs环境。若采用第1种方法，服务器每次部署时，都需要将`requirements.txt`中的依赖包安装一次，因此部署时间较长，但优点是服务器真正具备了MkDocs环境，所以本地的MkDocs工程即使不执行`mkdocs build`命令最终也能在Cloudflare部署成功。第2种方法本质上是将MkDocs工程的`site`文件夹下的静态网页直接部署到Cloudflare，优点是部署速度较快，但本地的MkDocs工程在同步到GitHub仓库前必须先执行`mkdocs build`命令。
+    &emsp;&emsp;出现`error code 127`的原因是服务器未安装MkDocs环境。若采用第1种方法，服务器每次部署时，都需要将`requirements.txt`中的依赖包安装一次，因此部署时间较长，但优点是服务器真正具备了MkDocs环境，所以本地的MkDocs工程即使不执行`mkdocs build`命令最终也能在Cloudflare部署成功。第2种方法本质上是将MkDocs工程下的`site`文件夹中的静态网页直接部署到Cloudflare，优点是部署速度较快，但本地的MkDocs工程在同步到GitHub仓库前必须先执行`mkdocs build`命令。
 
 ### 4.5 多个部署的回滚或删除
 

@@ -222,17 +222,21 @@
 
     &emsp;&emsp;一般重试部署后即可成功，若还是失败，则再次点击重试部署按钮。若多次重试仍然失败，则根据日志中的报错提示进行纠错，或尝试重新构建Cloudflare Pages工程。
 
-    &emsp;&emsp;如果多次重新部署却仍然失败，且日志出现`error code 127`的错误提示，则进入Cloudflare Pages工程的设置页面，将`Build configuration`中的`Framework preset`设置为`None`，并删除`Build command`，如图1-21所示。
+    &emsp;&emsp;如果多次重新部署却仍然失败，且日志出现`error code 127`的错误提示，有以下2种解决方法。
+    
+    &emsp;&emsp;第1种方法，将<a href="./#12" target=_blank>1.2节</a>中的<a href="https://gitee.com/hitsz-cslab/gitee-page-demo/blob/master/stupkt/requirements.txt" target="_blank">requirements.txt文件</a>放置到MkDocs工程的根目录下，并同步到GitHub仓库，然后回到部署页面，在失败的deployment右侧选择`Retry deployment`以重新部署，如图1-21所示。
 
     <center><img src="../assets/1-21.png" width = 100%></center>
-    <center>图1-21 因为`error code 127`而多次部署失败时，修改部署设置</center>
+    <center>图1-21 修改部署设置后，重新部署</center>
 
-    &emsp;&emsp;接着，回到部署页面，在失败的deployment右侧选择`Retry deployment`以重新部署，如图1-22所示。
+    &emsp;&emsp;第2种方法，进入Cloudflare Pages工程的设置页面，将`Build configuration`中的`Framework preset`设置为`None`，并删除`Build command`，如图1-22所示。
 
     <center><img src="../assets/1-22.png" width = 100%></center>
-    <center>图1-22 修改部署设置后，重新部署</center>
+    <center>图1-22 因为`error code 127`而多次部署失败时，修改部署设置</center>
 
-abc
+    &emsp;&emsp;接着，按照如图1-21所示的操作重新部署即可。
+
+    &emsp;&emsp;出现`error code 127`的原因是服务器未安装MkDocs环境。若采用第1种方法，服务器每次部署时，都需要将`requirements.txt`中的依赖包安装一次，因此部署时间较长，但优点是服务器真正具备了MkDocs环境，所以本地的MkDocs工程即使不执行`mkdocs build`命令最终也能在Cloudflare部署成功。第2种方法本质上是将MkDocs工程的`site`文件夹下的静态网页直接部署到Cloudflare，优点是部署速度较快，但本地的MkDocs工程在同步到GitHub仓库前必须先执行`mkdocs build`命令。
 
 ### 4.5 多个部署的回滚或删除
 

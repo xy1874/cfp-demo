@@ -227,10 +227,10 @@
     <center><img src="../assets/1-21.png" width = 100%></center>
     <center>图1-21 因为`error code 127`而多次部署失败时，修改部署设置</center>
 
-    &emsp;&emsp;接着，回到部署页面，按如图1-22所示的操作删除现有的失败的部署后，再点击Create deployment按钮重新部署即可。
+    &emsp;&emsp;接着，回到部署页面，在失败的deployment右侧选择`Retry deployment`以重新部署，如图1-22所示。
 
     <center><img src="../assets/1-22.png" width = 100%></center>
-    <center>图1-22 修改部署设置后，删除现有部署并重新部署</center>
+    <center>图1-22 修改部署设置后，重新部署</center>
 
 ### 4.5 多个部署的回滚或删除
 

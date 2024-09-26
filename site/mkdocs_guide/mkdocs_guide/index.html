@@ -1336,9 +1336,9 @@
 <p>&emsp;&emsp;如果多次重新部署却仍然失败，且日志出现<code>error code 127</code>的错误提示，则进入Cloudflare Pages工程的设置页面，将<code>Build configuration</code>中的<code>Framework preset</code>设置为<code>None</code>，并删除<code>Build command</code>，如图1-21所示。</p>
 <p><center><img src="../assets/1-21.png" width = 100%></center>
 <center>图1-21 因为<code>error code 127</code>而多次部署失败时，修改部署设置</center></p>
-<p>&emsp;&emsp;接着，回到部署页面，按如图1-22所示的操作删除现有的失败的部署后，再点击Create deployment按钮重新部署即可。</p>
+<p>&emsp;&emsp;接着，回到部署页面，在失败的deployment右侧选择<code>Retry deployment</code>以重新部署，如图1-22所示。</p>
 <p><center><img src="../assets/1-22.png" width = 100%></center>
-<center>图1-22 修改部署设置后，删除现有部署并重新部署</center></p>
+<center>图1-22 修改部署设置后，重新部署</center></p>
 </div>
 <h3 id="45">4.5 多个部署的回滚或删除</h3>
 <p>&emsp;&emsp;每次更新GitHub仓库，或手动点击部署按钮，都会在Cloudflare Pages工程下生成一个对应的部署，如图1-23所示。</p>

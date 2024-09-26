@@ -232,6 +232,8 @@
     <center><img src="../assets/1-22.png" width = 100%></center>
     <center>图1-22 修改部署设置后，重新部署</center>
 
+abc
+
 ### 4.5 多个部署的回滚或删除
 
 &emsp;&emsp;每次更新GitHub仓库，或手动点击部署按钮，都会在Cloudflare Pages工程下生成一个对应的部署，如图1-23所示。

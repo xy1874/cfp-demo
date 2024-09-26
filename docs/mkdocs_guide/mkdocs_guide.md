@@ -204,7 +204,7 @@
 
 &emsp;&emsp;后续需要更新静态网页内容时，只需使用Git工具，将本地的更新内容同步到GitHub仓库即可。Cloudflare将自动检测GitHub仓库的更新动态并自动更新静态网页。Cloudflare基本可以实现在数秒内将静态网页的内容进行更新，如果等待片刻后，静态网页内容尚未更新，则可能是更新失败。
 
-!!! warning "自动更新失败怎么办？"
+!!! tip "部署失败怎么办？"
     &emsp;&emsp;有些时候，GitHub仓库被更新后，Cloudflare自动更新网页会出现失败的情况。此时，只需登录Cloudflare账户，在图1-11所示的界面找到部署失败的Cloudflare Pages工程，如图1-18所示。
 
     <center><img src="../assets/1-18.png" width = 100%></center>
@@ -222,11 +222,21 @@
 
     &emsp;&emsp;一般重试部署后即可成功，若还是失败，则再次点击重试部署按钮。若多次重试仍然失败，则根据日志中的报错提示进行纠错，或尝试重新构建Cloudflare Pages工程。
 
+    &emsp;&emsp;如果多次重新部署却仍然失败，且日志出现`error code 127`的错误提示，则进入Cloudflare Pages工程的设置页面，将`Build configuration`中的`Framework preset`设置为`None`，并删除`Build command`，如图1-21所示。
+
+    <center><img src="../assets/1-21.png" width = 100%></center>
+    <center>图1-21 因为`error code 127`而多次部署失败时，修改部署设置</center>
+
+    &emsp;&emsp;接着，回到部署页面，按如图1-22所示的操作删除现有的失败的部署后，再点击Create deployment按钮重新部署即可。
+
+    <center><img src="../assets/1-22.png" width = 100%></center>
+    <center>图1-22 修改部署设置后，删除现有部署并重新部署</center>
+
 ### 4.5 多个部署的回滚或删除
 
-&emsp;&emsp;每次更新GitHub仓库，或手动点击部署按钮，都会在Cloudflare Pages工程下生成一个对应的部署，如图1-21所示。
+&emsp;&emsp;每次更新GitHub仓库，或手动点击部署按钮，都会在Cloudflare Pages工程下生成一个对应的部署，如图1-23所示。
 
-<center><img src="../assets/1-21.png" width = 100%></center>
-<center>图1-21 Cloudflare Pages的多个部署</center>
+<center><img src="../assets/1-23.png" width = 100%></center>
+<center>图1-23 Cloudflare Pages的多个部署</center>
 
-&emsp;&emsp;一般地，访问`<project-name>.pages.dev`时，默认访问的是图1-21中最新的部署。开发者还可以参考图1-21所示的操作对这些部署进行回滚、重试或删除。
+&emsp;&emsp;一般地，访问`<project-name>.pages.dev`时，默认访问的是图1-23中最新的部署。开发者还可以参考图1-23所示的操作对这些部署进行回滚、重试或删除。

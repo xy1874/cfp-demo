@@ -227,7 +227,7 @@
     &emsp;&emsp;第1种方法，将<a href="./#12" target=_blank>1.2节</a>中的<a href="https://gitee.com/hitsz-cslab/gitee-page-demo/blob/master/stupkt/requirements.txt" target="_blank">requirements.txt文件</a>放置到MkDocs工程的根目录下，并同步到GitHub仓库，然后回到部署页面，在失败的deployment右侧选择`Retry deployment`以重新部署，如图1-21所示。
 
     <center><img src="../assets/1-21.png" width = 100%></center>
-    <center>图1-21 修改部署设置后，重新部署</center>
+    <center>图1-21 重新部署Cloudflare Pages</center>
 
     &emsp;&emsp;第2种方法，进入Cloudflare Pages工程的设置页面，将`Build configuration`中的`Framework preset`设置为`None`，并删除`Build command`，如图1-22所示。
 

@@ -157,7 +157,7 @@
 
 ### 4.3 连接Cloudflare与GitHub
 
-&emsp;&emsp;打开链接<a href="https://pages.dev" target=_blank>pages.dev</a>，登录或注册你的Cloudflare账户。
+&emsp;&emsp;打开<a href="https://www.cloudflare-cn.com/" target=_blank>Cloudflare</a>，登录或注册你的Cloudflare账户。
 
 &emsp;&emsp;点击左侧栏目中的“Workers & Pages”，点击右侧页面的“Pages”，然后点击“Connect to Git”按钮，如图1-11所示。
 
